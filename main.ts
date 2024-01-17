@@ -159,7 +159,7 @@ namespace wuKongController {
     }
     //% weight=93
     //% block="set %servoType servo %servo angle to %angle"
-    //% angle.min=0 angle.max=360
+    //% angle.min=-180 angle.max=180
     //% block.loc.cs="nastavit $servoType servo $servo na $angle"
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
         switch (servo) {
@@ -208,13 +208,13 @@ namespace wuKongController {
 
         switch (servoType) {
             case ServoTypeList._180:
-                angle = Math.map(angle, 0, 180, 0, 180)
+                angle = Math.map(angle, -90, 90, 0, 180)
                 break
             case ServoTypeList._270:
-                angle = Math.map(angle, 0, 270, 0, 180)
+                angle = Math.map(angle, -135, 135, 0, 180)
                 break
             case ServoTypeList._360:
-                angle = Math.map(angle, 0, 360, 0, 180)
+                angle = Math.map(angle, -180, 180, 0, 180)
                 break
         }
 
