@@ -208,13 +208,13 @@ namespace wuKongController {
 
         switch (servoType) {
             case ServoTypeList._180:
-                angle = Math.map(angle, -90, 90, 0, 180)
+                angle = Math.map(angle, 0, 180, 0, 180)
                 break
             case ServoTypeList._270:
-                angle = Math.map(angle, -135, 135, 0, 180)
+                angle = Math.map(angle, 0, 270, 0, 180)
                 break
             case ServoTypeList._360:
-                angle = Math.map(angle, -180, 180, 0, 180)
+                angle = Math.map(angle, 0, 360, 0, 180)
                 break
         }
 
