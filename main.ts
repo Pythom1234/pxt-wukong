@@ -40,10 +40,6 @@ enum ServoTypeList {
 }
 //% color=#ff7f24 icon="\uf2db"
 namespace wuKongController {
-    let LeftFront_def = ServoList.S0
-    let LeftRear_def = ServoList.S1
-    let RightFront_def = ServoList.S2
-    let RightRear_def = ServoList.S3
     const board_address = 0x10
 
     //% weight=99
