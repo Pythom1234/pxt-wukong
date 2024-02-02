@@ -244,29 +244,4 @@ namespace wuKongController {
         setServoAngle(0, 6, 90)
         setServoAngle(0, 7, 90)
     }
-    //% block="get servo %servo angle"
-    //% weight=91
-    //% block.loc.cs="úhel serva $servo"
-    export function servoAngle(servo: ServoList): number {
-        switch (servo) {
-            case 0:
-                return servoS0Angle
-            case 1:
-                return servoS1Angle
-            case 2:
-                return servoS2Angle
-            case 3:
-                return servoS3Angle
-            case 4:
-                return servoS4Angle
-            case 5:
-                return servoS5Angle
-            case 6:
-                return servoS6Angle
-            case 7:
-                return servoS7Angle
-            default:
-                return 0
-        }
-    }
 }
