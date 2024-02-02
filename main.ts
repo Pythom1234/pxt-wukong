@@ -145,9 +145,10 @@ namespace wuKongController {
         setMotorSpeed(MotorList.M1, 0)
         setMotorSpeed(MotorList.M2, 0)
     }
+    const A = 50
     //% weight=93
     //% block="set %servoType servo %servo angle to %angle"
-    //% angle.min=0 angle.max=360
+    //% angle.min=0 angle.max=A
     //% block.loc.cs="nastavit $servoType servo $servo na $angle"
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
         let buf = pins.createBuffer(4);
