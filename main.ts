@@ -147,7 +147,7 @@ namespace wuKongController {
     }
     //% weight=93
     //% block="set %servoType servo %servo angle to %angle"
-    //% angle.min=-180 angle.max=180
+    //% angle.min=0 angle.max=360
     //% block.loc.cs="nastavit $servoType servo $servo na $angle"
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
         let buf = pins.createBuffer(4);
