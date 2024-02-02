@@ -44,14 +44,6 @@ namespace wuKongController {
     let LeftRear_def = ServoList.S1
     let RightFront_def = ServoList.S2
     let RightRear_def = ServoList.S3
-    let servoS0Angle = 0
-    let servoS1Angle = 0
-    let servoS2Angle = 0
-    let servoS3Angle = 0
-    let servoS4Angle = 0
-    let servoS5Angle = 0
-    let servoS6Angle = 0
-    let servoS7Angle = 0
     const board_address = 0x10
 
     //% weight=99
@@ -162,24 +154,6 @@ namespace wuKongController {
     //% angle.min=-180 angle.max=180
     //% block.loc.cs="nastavit $servoType servo $servo na $angle"
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
-        switch (servo) {
-            case 0:
-                servoS0Angle = angle
-            case 1:
-                servoS1Angle = angle
-            case 2:
-                servoS2Angle = angle
-            case 3:
-                servoS3Angle = angle
-            case 4:
-                servoS4Angle = angle
-            case 5:
-                servoS5Angle = angle
-            case 6:
-                servoS6Angle = angle
-            case 7:
-                servoS7Angle = angle
-        }
         let buf = pins.createBuffer(4);
         if (servo == 0) {
             buf[0] = 0x03;
