@@ -39,7 +39,7 @@ enum ServoTypeList {
     _360
 }
 //% color=#ff7f24 icon="\uf2db"
-namespace wuKongController {
+namespace wuKong {
     const board_address = 0x10
 
     //% weight=99
@@ -200,18 +200,5 @@ namespace wuKongController {
     export function setServoSpeed(servo: ServoList, speed: number): void {
         speed = Math.map(speed, -100, 100, 0, 180)
         setServoAngle(ServoTypeList._180, servo, speed)
-    }
-    //% block="initalize wuKongController"
-    //% weight=101
-    //% block.loc.cs="inicializovat wuKongController"
-    export function initalize(): void {
-        setServoAngle(0, 0, 90)
-        setServoAngle(0, 1, 90)
-        setServoAngle(0, 2, 90)
-        setServoAngle(0, 3, 90)
-        setServoAngle(0, 4, 90)
-        setServoAngle(0, 5, 90)
-        setServoAngle(0, 6, 90)
-        setServoAngle(0, 7, 90)
     }
 }
