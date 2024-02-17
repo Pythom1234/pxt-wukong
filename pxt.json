@@ -1,5 +1,5 @@
 {
-    "name": "pxt-wukong",
+    "name": "wukong",
     "description": "",
     "dependencies": {
         "core": "*",
