@@ -146,9 +146,9 @@ namespace wuKong {
         setMotorSpeed(MotorList.M2, 0)
     }
     //% weight=93
-    //% block="set %servoType servo %servo angle to %angle ˚"
+    //% block="set %servoType servo %servo angle to %angle °"
     //% angle.min=0 angle.max=360
-    //% block.loc.cs="nastavit $servoType servo $servo na $angle ˚"
+    //% block.loc.cs="nastavit $servoType servo $servo na $angle °"
     export function setServoAngle(servoType: ServoTypeList, servo: ServoList, angle: number): void {
         let buf = pins.createBuffer(4);
         if (servo == 0) {
